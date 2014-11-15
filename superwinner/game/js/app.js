@@ -26,6 +26,6 @@ angular.module('starter', ['ionic'])
     $scope.winCount++;
     $timeout(function() {
       $scope.won = false;
-    }, 5000)
+    }, 3000)
   }
 })

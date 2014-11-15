@@ -59,6 +59,31 @@
       .won .winCount {
         color: black;
       }
+
+      .logo {
+        transition: color .5s;
+        text-align: center;
+        margin-top: 2em;
+        color: pink;
+      }
+
+      .logo a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px dotted pink;
+      }
+
+      .won .logo a {
+        border-bottom: 1px dotted black;
+      }
+
+      .won .logo {
+        color: black;
+      }
+
+      .logo img {
+        height: 1em;
+      }
     </style>
   </head>
   <body ng-app="starter">
@@ -71,13 +96,18 @@
             <tr>
               <td>
                 <div ng-show="!won">
-                  <div class="icon ion-trophy winnerLogo balanced"></div>
+                  <div class="icon ion-trophy winnerLogo energized"></div>
                   <div class="winnerText energized">Click to win!</div>
                 </div>
                 <div ng-show="won">
                   <div class="icon ion-star winnerLogo assertive"></div>
                   <div class="winnerText assertive">You won!!!</div>
                 </div>
+                <p class="logo">
+                  <img src="img/heart.png" />
+                  Created for <a href="http://lovejam2014.tumblr.com/">The Love Jam</a>
+                  <img src="img/heart.png" />
+                </p>
               </td>
             </tr>
           </table>
