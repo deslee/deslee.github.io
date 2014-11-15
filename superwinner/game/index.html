@@ -49,13 +49,24 @@
         font-family: monospace;
         text-align: center;
       }
+
+      .winCount {
+        color: white;
+        transition: color .5s;
+        position: absolute;
+      }
+
+      .won .winCount {
+        color: black;
+      }
     </style>
   </head>
   <body ng-app="starter">
 
     <ion-pane>
       <ion-content ng-controller="winnerController">
-        <div class="wrapper {{won ? 'energized-bg' : 'dark-bg'}}" ng-click="win();">
+        <div class="wrapper {{won ? 'energized-bg won' : 'dark-bg'}}" ng-click="win();">
+          <p class="winCount">You won {{winCount}} times</p>
           <table>
             <tr>
               <td>

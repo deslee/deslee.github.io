@@ -20,8 +20,10 @@ angular.module('starter', ['ionic'])
 
 .controller('winnerController', function($scope, $timeout) {
   $scope.won = false;
+  $scope.winCount = 0;
   $scope.win = function() {
     $scope.won = true;
+    $scope.winCount++;
     $timeout(function() {
       $scope.won = false;
     }, 5000)
