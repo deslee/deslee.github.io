@@ -1,0 +1,20 @@
+html, body {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body > main {
+  height: 100%;
+  box-sizing: border-box; }
+
+body {
+  background-color: #ecf0f1; }
+
+@media only screen {
+  body {
+    font-size: 16px; } }
+
+@media only screen and (min-width: 641px) {
+  body {
+    font-size: 18px; } }

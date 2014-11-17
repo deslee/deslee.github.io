@@ -1,0 +1,37 @@
+<polymer-element name="desmond-post" attributes="post url">
+  <template>
+    <style>
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      #post-body {
+        line-height: 1.5em;
+      }
+
+      pre {
+        overflow-y: auto;
+      }
+    </style>
+
+    <div id="post">
+      <h2 class="post-heading"><a href="{{url}}">{{post.meta.Title}}</a></h2>
+      <div id="post-body"></div>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      ready: function() {
+        var self = this;
+        var element = self.$['post-body'];
+        element.innerHTML = self.post.html;
+      }
+    });
+  </script>
+</polymer-element>
