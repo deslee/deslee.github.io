@@ -32,7 +32,7 @@
   </template>
   <script>
     Polymer({
-      domReady: function() {
+      attributeChanged: function() {
         var self = this;
         var element = self.$['post-body'];
         this.date = new Date(self.post.meta.Date);

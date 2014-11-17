@@ -121,7 +121,7 @@
       });
 
       if(results.length) {
-        this.selected = results[0].name;
+        this.selected = document.title = results[0].name;
       }
 
       results = this.posts.filter(function(post, i) {
@@ -130,6 +130,7 @@
       });
 
       if(results.length) {
+        document.title = results[0].meta.Title;
         this.selected = results[0];
       }
     }
