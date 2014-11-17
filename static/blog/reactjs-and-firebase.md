@@ -1,6 +1,6 @@
 ---
 Title:   Learning how to use ReactJS and Firebase
-Date: 2014-11-17
+Date: 2014-11-6
 ---
 
 ### Introduction
