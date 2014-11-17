@@ -3,6 +3,7 @@
 
 <link rel="import" href="desmond-menu.html">
 <link rel="import" href="desmond-content.html">
+<link rel="import" href="desmond-loading.html">
 
 <polymer-element name="desmond-site">
   <template>
@@ -83,6 +84,10 @@
           <desmond-content posts="{{posts}}" pages="{{pages}}" page="{{selected}}" pageIndex="{{pageIndex}}"></desmond-content>
         </div>
       </main>
+    </template>
+
+    <template if="{{!receivedBlogData || !receivedPageData}}">
+      <desmond-loading></desmond-loading>
     </template>
 
   </template>

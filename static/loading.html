@@ -1,0 +1,135 @@
+<polymer-element name="desmond-loading" noscript>
+  <template>
+    <style>
+      $w: 24px;
+      $xspace: $w/2;
+      $yspace: 7px;
+      $speed: 1.5s;
+
+      .tetrominos {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-$xspace, -$yspace)
+      }
+
+      .tetromino {
+        width: $w;
+        position: absolute;
+        transition: all ease .3s;
+      }
+
+      @keyframes tetromino1 {
+        0% {
+          /* compose logo */
+          transform: translate(0,0);
+        } 20% {
+            /* 1 on 3 */
+            transform: translate(0,0);
+          } 40% {
+              /* L-shape */
+              transform: translate(0,0);
+            } 50% {
+                /* pre-box */
+                transform: translate($xspace,-$yspace);
+              } 60% {
+                  /* box */
+                  transform: translate($xspace*2,0);
+                } 90%, 100% {
+                    /* compose logo */
+                    transform: translate($xspace*2,0);
+                  }
+      }
+
+      @keyframes tetromino2 {
+        0% {
+          /* compose logo */
+          transform: translate($xspace*2, 0px);
+        } 20% {
+            /* 1 on 3 */
+            transform: translate($xspace*2, 0px);
+          } 40% {
+              /* L-shape */
+              transform: translate($xspace*3, $yspace);
+            } 60% {
+                /* box */
+                transform: translate($xspace*3, $yspace);
+              } 90%, 100% {
+                  /* compose logo */
+                  transform: translate($xspace*3, $yspace);
+                }
+      }
+
+      @keyframes tetromino3 {
+        0% {
+          /* compose logo */
+          transform: translate($xspace*3, $yspace);
+        } 20% {
+            /* 1 on 3 */
+            transform: translate($xspace*2, $yspace*2);
+          } 40% {
+              /* L-shape */
+              transform: translate($xspace*2, $yspace*2);
+            } 60% {
+                /* box */
+                transform: translate($xspace*2, $yspace*2);
+              } 90%, 100% {
+                  /* compose logo */
+                  transform: translate($xspace, $yspace);
+                }
+      }
+
+      @keyframes tetromino4 {
+        0% {
+          /* compose logo */
+          transform: translate($xspace, $yspace);
+        } 20% {
+            /* 1 on 3 */
+            transform: translate($xspace, $yspace);
+          } 40% {
+              /* L-shape */
+              transform: translate($xspace, $yspace);
+            } 60% {
+                /* box */
+                transform: translate($xspace, $yspace);
+              } 90%, 100% {
+                  /* compose logo */
+                  transform: translate(0, 0);
+                }
+      }
+
+
+      .box1 {
+        animation: tetromino1 $speed ease-out infinite;
+      }
+      .box2 {
+        animation: tetromino2 $speed ease-out infinite;
+      }
+      .box3 {
+        animation: tetromino3 $speed ease-out infinite;
+        z-index: 2;
+      }
+      .box4 {
+        animation: tetromino4 $speed ease-out infinite;
+      }
+    </style>
+
+    <div class='tetrominos'>
+      <svg class="tetromino box1" x="0px" y="0px" viewBox="0 0 612 684.5">
+        <polygon fill="#010101" points="305.7,0 0,171.2 0,513.5 305.7,684.5 612,513.5 612,171.2"/>
+        <polyline fill="#FFFFFF" points="305.7,80.3 72.1,211.3 305.7,342.3 539.9,211.3 305.7,80.3"/>
+      </svg>
+      <svg class="tetromino box2" x="0px" y="0px" viewBox="0 0 612 684.5">
+        <polygon fill="#010101" points="305.7,0 0,171.2 0,513.5 305.7,684.5 612,513.5 612,171.2"/>
+        <polyline fill="#FFFFFF" points="305.7,80.3 72.1,211.3 305.7,342.3 539.9,211.3 305.7,80.3"/>
+      </svg>
+      <svg class="tetromino box3" x="0px" y="0px" viewBox="0 0 612 684.5">
+        <polygon fill="#010101" points="305.7,0 0,171.2 0,513.5 305.7,684.5 612,513.5 612,171.2"/>
+        <polyline fill="#FFFFFF" points="305.7,80.3 72.1,211.3 305.7,342.3 539.9,211.3 305.7,80.3"/>
+      </svg>
+      <svg class="tetromino box4" x="0px" y="0px" viewBox="0 0 612 684.5">
+        <polygon fill="#010101" points="305.7,0 0,171.2 0,513.5 305.7,684.5 612,513.5 612,171.2"/>
+        <polyline fill="#FFFFFF" points="305.7,80.3 72.1,211.3 305.7,342.3 539.9,211.3 305.7,80.3"/>
+      </svg>
+    </div>
+  </template>
+</polymer-element>
