@@ -15,6 +15,10 @@
         line-height: 1.5em;
       }
 
+      #post-body * {
+        max-width: 100%;
+      }
+
       pre {
         overflow-y: auto;
       }
@@ -22,14 +26,18 @@
 
     <div id="post">
       <h2 class="post-heading"><a href="{{url}}">{{post.meta.Title}}</a></h2>
+      <time datetime="{{post.meta.Date}}">{{dateString}}</time>
       <div id="post-body"></div>
     </div>
   </template>
   <script>
     Polymer({
-      ready: function() {
+      domReady: function() {
         var self = this;
         var element = self.$['post-body'];
+        this.date = new Date(self.post.meta.Date);
+        var month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][this.date.getMonth()];
+        this.dateString = this.date.getFullYear() + ' ' + month + ' ' + this.date.getDate();
         element.innerHTML = self.post.html;
       }
     });
