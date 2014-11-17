@@ -26,7 +26,7 @@
 
     <div id="post">
       <h2 class="post-heading"><a href="{{url}}">{{post.meta.Title}}</a></h2>
-      <time datetime="{{post.meta.Date}}">{{dateString}}</time>
+      <template if="{{post.meta.Date}}"><time datetime="{{post.meta.Date}}">{{dateString}}</time></template>
       <div id="post-body"></div>
     </div>
   </template>
