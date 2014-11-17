@@ -1,6 +1,6 @@
 ---
 Title:   Updated blog to Polymer
-Date:     2014-1-17
+Date:     2014-11-17
 ---
 
 I updated my blog to use [Polymer][1].

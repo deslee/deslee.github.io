@@ -1,1 +1,1 @@
-cp -R ../desmond-polymer-sandbox/build/* ./; git add -A;
+cp -fR ../desmond-polymer-sandbox/build/* ./; git add -A;
