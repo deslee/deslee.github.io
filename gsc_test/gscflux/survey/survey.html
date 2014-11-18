@@ -1,0 +1,10 @@
+<button ng-click="selectedTab='location'">location</button> <button ng-click="selectedTab='subjects'">subjects</button>
+
+<gsc-tabs selected-tab="selectedTab">
+  <gsc-tab name="location">
+    <gsc-survey-location></gsc-survey-location>
+  </gsc-tab>
+  <gsc-tab name="subjects">
+    <gsc-survey-subjects></gsc-survey-subjects>
+  </gsc-tab>
+</gsc-tabs>

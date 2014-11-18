@@ -1,0 +1,19 @@
+<button ng-click="setLocationImportance('no')">no</button>
+<button ng-click="setLocationImportance('somewhat')">somewhat</button>
+<button ng-click="setLocationImportance('very')">very</button>
+
+<gsc-tabs selected-tab="selectedTab">
+
+  <gsc-tab name="no">
+    NO
+  </gsc-tab>
+  <gsc-tab name="somewhat">
+    SOMEWHAT
+  </gsc-tab>
+  <gsc-tab name="very">
+    VERY
+  </gsc-tab>
+
+  {{survey}}
+</gsc-tabs>
+
