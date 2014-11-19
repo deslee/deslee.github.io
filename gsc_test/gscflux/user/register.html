@@ -1,0 +1,5 @@
+<form ng-submit="view.submit()">
+  <label for="gscUserUsername">Username</label> <input type="text" id="gscUserUsername" ng-model="view.form.name"> <button type="submit">Register</button>
+  <span ng-if="view.errors">Error: {{view.errors}}</span>
+</form>
+

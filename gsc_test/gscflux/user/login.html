@@ -1,0 +1,14 @@
+<div>
+  <p>Register...</p>
+  <gsc-register></gsc-register>
+  <p>or log in...</p>
+  <ul>
+    <li ng-repeat="user in view.users track by $index">
+      {{user.name}}
+      <a href="" ng-click="view.login(user)">
+        Login
+      </a>
+    </li>
+  </ul>
+  <div ng-if="view.users.length == 0">No users in system</div>
+</div>

@@ -1,10 +1,23 @@
-<button ng-click="selectedTab='location'">location</button> <button ng-click="selectedTab='subjects'">subjects</button>
-
-<gsc-tabs selected-tab="selectedTab">
-  <gsc-tab name="location">
-    <gsc-survey-location></gsc-survey-location>
+<gsc-tabs selected-tab="view.outerTab">
+  <gsc-tab name="login">
+    <gsc-login></gsc-login>
   </gsc-tab>
-  <gsc-tab name="subjects">
-    <gsc-survey-subjects></gsc-survey-subjects>
+  <gsc-tab name="survey">
+    <div><a href="" ng-click="view.logout()">Logout</a></div>
+
+
+    <div>Survey for {{view.currentUser.name}}</div>
+    <button ng-click="view.innerTab='location'">location</button> <button ng-click="view.innerTab='subjects'">subjects</button>
+    <gsc-tabs selected-tab="view.innerTab">
+      <gsc-tab name="location">
+        <gsc-survey-location></gsc-survey-location>
+      </gsc-tab>
+      <gsc-tab name="subjects">
+        <gsc-survey-subjects></gsc-survey-subjects>
+      </gsc-tab>
+    </gsc-tabs>
+
   </gsc-tab>
 </gsc-tabs>
+
+{{survey}}
