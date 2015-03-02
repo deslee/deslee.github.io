@@ -446,7 +446,7 @@ React.createElement(Route, {handler: NestedRouteHandler, name: "Reactions", path
 	)
 );
 
-Router.run(routes, Router.HistoryLocation, function(Handler) {
+Router.run(routes, function(Handler) {
 	var injectPoint = document.getElementById('root_pixiebot2')
 	var port = injectPoint.getAttribute('data-api-port')
 	React.render(React.createElement(Handler, {port: port}), injectPoint);
